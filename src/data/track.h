@@ -9,9 +9,11 @@
 #include "graph.h"
 #include "path.h"
 
+class TrackItem;
 
 class Track
 {
+    friend class TrackItem;
 public:
 	Track(const TrackData &data);
 

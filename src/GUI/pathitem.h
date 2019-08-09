@@ -19,7 +19,7 @@ public:
 
 	QPainterPath shape() const {return _shape;}
 	QRectF boundingRect() const {return _shape.boundingRect();}
-	void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 	  QWidget *widget);
 
 	const Path &path() const {return _path;}
@@ -44,7 +44,7 @@ public slots:
 signals:
 	void selected(bool);
 
-private:
+protected:
 	const PathSegment *segment(qreal x) const;
 	QPointF position(qreal distance) const;
 	void updatePainterPath();
